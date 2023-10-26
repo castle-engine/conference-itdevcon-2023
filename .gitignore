@@ -1,0 +1,13 @@
+# Delphi outputs
+__history
+__recovery
+*.exe
+Win32
+Win64
+Linux64
+*.identcache
+*.local
+*.rsm
+
+# Backups
+*~

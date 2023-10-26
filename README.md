@@ -1,4 +1,4 @@
-# Example projects at ITDevCon 2023 conference
+# Example projects from ITDevCon 2023 presentation
 
 These are example projects used during Michalis Kamburelis presentation at [https://www.itdevcon.it/en/](ITDevCon 2023), a Delphi conference in Rome, October 2023.
 

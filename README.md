@@ -1,6 +1,6 @@
 # Example projects from ITDevCon 2023 presentation
 
-These are example projects used during Michalis Kamburelis presentation at [https://www.itdevcon.it/en/](ITDevCon 2023), a Delphi conference in Rome, October 2023.
+These are example projects used during Michalis Kamburelis presentation at [ITDevCon 2023](https://www.itdevcon.it/en/), a Delphi conference in Rome, October 2023.
 
 The announcement at CGE news: https://castle-engine.io/wp/2023/09/29/catch-me-at-itdevcon-2023-in-rome-giving-2-presentations-about-castle-game-engine/ .
 

@@ -6,6 +6,6 @@ The announcement at CGE news: https://castle-engine.io/wp/2023/09/29/catch-me-at
 
 Slides:
 
-- 1st talk, "Creating 3D games and applications using Castle Game Engine": https://docs.google.com/presentation/d/e/2PACX-1vQiwg5wboWVn8aCgxj7u617taha28IQDN1GPKtnEICi3aHRBhor9ZLLpyXmF_cHB4LdcMuH3AXwZ001/pub?start=false&loop=false&delayms=3000
+- 1st talk, "Creating 3D games and applications using Castle Game Engine": https://castle-engine.io/itdevcon2023/slides1
 
-- 2nd talk, "Advanced Castle Game Engine: forms, 3D generation, shaders, customization", https://docs.google.com/presentation/d/e/2PACX-1vSOehkeaLEHnowUhn-R-Y6g_wfvtNYjA0ILuUBoiZt1eHPcuNhgpYvEQxDiJ1X5gmnabtSwQJ-HbaYS/pub?start=false&loop=false&delayms=3000
+- 2nd talk, "Advanced Castle Game Engine: forms, 3D generation, shaders, customization", https://castle-engine.io/itdevcon2023/slides2

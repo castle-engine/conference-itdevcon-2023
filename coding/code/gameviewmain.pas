@@ -19,12 +19,12 @@ type
     { Components designed using CGE editor.
       These fields will be automatically initialized at Start. }
     LabelFps: TCastleLabel;
-    Button1, ButtonMove, ButtonLoadBunny: TCastleButton;
+    ButtonMakeSound, ButtonMove, ButtonLoadBunny: TCastleButton;
     SoundZap: TCastleSound;
     Scene1: TCastleScene;
     Viewport1: TCastleViewport;
   private
-    procedure ClickButton1(Sender: TObject);
+    procedure ClickMakeSound(Sender: TObject);
     procedure ClickMove(Sender: TObject);
     procedure ClickBunny(Sender: TObject);
   public
@@ -49,16 +49,16 @@ begin
   DesignUrl := 'castle-data:/gameviewmain.castle-user-interface';
 end;
 
-procedure TViewMain.ClickButton1(Sender: TObject);
+procedure TViewMain.ClickMakeSound(Sender: TObject);
 begin
-  WritelnLog('button!');
+  WritelnLog('Button with sound clicked!');
   SoundEngine.Play(SoundZap);
 end;
 
 procedure TViewMain.Start;
 begin
   inherited;
-  Button1.OnClick := ClickButton1;
+  ButtonMakeSound.OnClick := ClickMakeSound;
   ButtonMove.OnClick := ClickMove;
   ButtonLoadBunny.OnClick := ClickBunny;
 end;

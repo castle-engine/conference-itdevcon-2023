@@ -1,0 +1,42 @@
+# ----------------------------------------------------------------------------
+# GitHub Actions workflow to build and package the project using Castle Game Engine.
+# ----------------------------------------------------------------------------
+
+name: Build
+
+on: [push, pull_request]
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build_using_delphi:
+    name: Build Using Delphi
+    strategy:
+      matrix:
+        host-label: [
+          delphi_10_2,
+          delphi_11_3
+        ]
+    runs-on: ${{ matrix.host-label }}
+    steps:
+      - uses: actions/checkout@v4
+
+      # Setup Castle Game Engine
+      - name: Castle Game Engine - Env CASTLE_ENGINE_PATH
+        run: echo "CASTLE_ENGINE_PATH=$GITHUB_WORKSPACE/castle-engine" >> $GITHUB_ENV
+      - name: Castle Game Engine - Env PATH
+        run: echo "PATH=$PATH:$CASTLE_ENGINE_PATH/tools/build-tool/castle-engine" >> $GITHUB_ENV
+      - name: Castle Game Engine - Clone snapshot
+        run: git clone --depth 1 --single-branch --branch snapshot https://github.com/castle-engine/castle-engine/
+      - name: Castle Game Engine - Build
+        run: cd $CASTLE_ENGINE_PATH/tools/build-tool/ && ./castle-engine_compile.sh
+
+      # Build applications with Delphi
+      - name: Build coding/
+        run: cd coding/ && castle-engine compile --compiler=delphi
+      - name: Build delphi_fmx/
+        run: cd delphi_fmx/ && castle-engine compile --compiler=delphi
+      - name: Build delphi_vcl/
+        run: cd delphi_vcl/ && castle-engine compile --compiler=delphi
